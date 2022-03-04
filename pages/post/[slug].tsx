@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { Frontmatter } from "pages";
-import { getPostBySlug } from "lib/post";
+import { getAllSlugs, getPostBySlug } from "lib/post";
 import { MDXRemote } from "next-mdx-remote";
 import { MDXComponents } from "components/MDXComponent";
 
@@ -11,13 +11,15 @@ type Meta = Frontmatter & {
 };
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("posts");
+  // const files = fs.readdirSync("posts");
 
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace(".md", ""),
-    },
-  }));
+  // const paths = files.map((fileName) => ({
+  //   params: {
+  //     slug: fileName.replace(".md", ""),
+  //   },
+  // }));
+  const paths = getAllSlugs();
+  console.log("paths", paths);
 
   return {
     paths,
@@ -26,6 +28,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
+  console.log("params", params);
+
   const { slug } = params;
   const { meta, content } = await getPostBySlug(slug);
 
