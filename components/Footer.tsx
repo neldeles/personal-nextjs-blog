@@ -4,33 +4,11 @@ import GithubIcon from "assets/github.inline.svg";
 
 export function Footer() {
   return (
-    <div className="mx-auto w-full bg-black">
-      <footer className="mx-auto w-full flex items-center px-8 py-8 max-w-7xl">
+    <footer className="mx-auto w-full bg-black shrink-0">
+      <div className="mx-auto flex items-center px-8 py-8 max-w-7xl">
         <div className="mr-auto">
-          <p className="text-gray-200">Designed and developed by Noel.</p>
           <p className="text-gray-200">
-            Built with{" "}
-            <a
-              href="https://gatsbyjs.com"
-              className="text-base font-medium text-pink-500 underline hover:cursor-pointer"
-            >
-              Gatsby
-            </a>
-            ,{" "}
-            <a
-              href="https://tailwindcss.com"
-              className="text-base font-medium text-pink-500 underline hover:cursor-pointer"
-            >
-              TailwindCSS
-            </a>
-            , and{" "}
-            <a
-              href="https://github.com/ben-rogerson/twin.macro"
-              className="text-base font-medium text-pink-500 underline hover:cursor-pointer"
-            >
-              Twin.Macro
-            </a>
-            .
+            © 2022 neldeles.com. All rights reserved.
           </p>
         </div>
         <nav>
@@ -62,7 +40,7 @@ export function Footer() {
             </svg>
           </a>
         </nav>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 }

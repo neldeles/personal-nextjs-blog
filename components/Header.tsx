@@ -3,19 +3,37 @@ import Link from "next/link";
 import resume from "assets/resume.pdf";
 import { StyledLink } from "./StyledLink";
 
+/* This example requires Tailwind CSS v2.0+ */
+const navigation = [
+  { name: "blog", href: "/blog" },
+  { name: "tags", href: "#" },
+  { name: "contact", href: "#" },
+];
+
 export function Header() {
   return (
-    <div className="mx-auto w-full">
-      <div className="items-center bg-white flex max-w-7xl mx-auto px-8 py-0 h-24">
-        <StyledLink href="/">
-          <span className="hidden md:flex">neldeles</span>
-          <span className="md:hidden">nd</span>
-        </StyledLink>
-        {/* <StyledLink>blog</StyledLink>
-        <StyledLink>tags</StyledLink>
-        <StyledLink>contact</StyledLink>
-        <StyledLink>resume</StyledLink> */}
-      </div>
-    </div>
+    <header className="bg-white sticky top-0 w-full h-24 mb-4 sm:mb-0 z-10">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+        <div className="w-full pt-6 flex items-center justify-between border-b border-pink-600 lg:border-none">
+          <div className="flex items-center">
+            <StyledLink href="/">neldeles</StyledLink>
+            <div className="hidden ml-10 space-x-8 lg:block">
+              {navigation.map((link) => (
+                <StyledLink key={link.name} href={link.href}>
+                  {link.name}
+                </StyledLink>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden bg-white">
+          {navigation.map((link) => (
+            <StyledLink key={link.name} href={link.href}>
+              {link.name}
+            </StyledLink>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
 }
