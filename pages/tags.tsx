@@ -17,9 +17,6 @@ export default function TagsList({ tags }: { tags: any }) {
 
   return (
     <div className="mx-auto max-w-prose">
-      <h1 className="mt-2 mb-1.5 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        Tags
-      </h1>
       <ul className="flex flex-wrap justify-around">
         {Object.keys(tags).map((key: string) => (
           <li key={key} className="mt-6 flex-grow flex-basis[25%]">
