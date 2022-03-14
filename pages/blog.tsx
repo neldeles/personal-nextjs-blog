@@ -37,7 +37,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
   console.log("posts", posts);
 
   return (
-    <div className="max-w-prose mx-auto">
+    <div className="max-w-prose mx-auto py-16">
       {posts.map(({ slug, frontmatter }) => (
         <div key={slug}>
           <Link href={`/post/${slug}`}>
