@@ -6,7 +6,7 @@ import { StyledLink } from "./StyledLink";
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
   { name: "blog", href: "/blog" },
-  { name: "tags", href: "#" },
+  { name: "tags", href: "/tags" },
   { name: "contact", href: "#" },
 ];
 

@@ -74,7 +74,7 @@ export default function Home({ posts }: { posts: Post[] }) {
               (☉‿☉✿)
             </h2>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Hello, I'm Noel.
+              Hello, I&apos;m Noel.
             </p>
             <p className="max-w-xl mt-5 mx-auto text-lg text-gray-500">
               Previously{" "}
