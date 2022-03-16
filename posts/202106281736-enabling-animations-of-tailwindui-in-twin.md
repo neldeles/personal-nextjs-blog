@@ -1,11 +1,11 @@
 ---
-date: '2021-06-28T17:36:08'
-tags: ['twin', 'tailwind', 'react']
-title: Enabling animations of TailwindUI in Twin 
+date: "2021-06-28T17:36:08"
+tags: ["twin", "tailwind", "react", "react-testing-library"]
+title: Enabling animations of TailwindUI in Twin
 published: true
 description: "Enabling the animation of TailwindUI's react components in Twin"
 aliases:
-references: ['https://github.com/ben-rogerson/twin.macro/issues/349']
+references: ["https://github.com/ben-rogerson/twin.macro/issues/349"]
 ---
 
 The problem stems from the fact that [the classes aren't pulled in by twin since they are not applied using `tw`.](https://github.com/ben-rogerson/twin.macro/discussions/394#discussion-3324703).
@@ -13,6 +13,7 @@ The problem stems from the fact that [the classes aren't pulled in by twin since
 Here's the [solution](https://github.com/ben-rogerson/twin.macro/issues/349#issuecomment-790856038) as suggested by Ben Rogerson (creator of the Twin library) himself:
 
 With Emotion you can use their ClassNames import:
+
 ```js
 import { ClassNames } from '@emotion/react'
 
@@ -37,5 +38,7 @@ import { ClassNames } from '@emotion/react'
 ```
 
 # Footer
+
 ---
-Related: 
+
+Related:
