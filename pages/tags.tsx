@@ -17,12 +17,13 @@ export default function TagsList({ tags }: { tags: any }) {
   return (
     <div className="mx-auto max-w-prose">
       <ul className="flex flex-wrap justify-around">
-        {Object.keys(tags).map((key: string) => {
+        {tags.map((tag: any) => {
+          const [tagName, tagCount] = tag;
           return (
-            <li key={key} className="mt-6 flex-grow flex-basis[25%]">
-              <Link href={`/tags/${key}/`}>
+            <li key={tagName} className="mt-6 flex-grow flex-basis[25%]">
+              <Link href={`/tags/${tagName}/`}>
                 <a className="underline font-medium hover:bg-pink-600 hover:text-white hover:cursor-pointer">
-                  {key} ({tags[key]})
+                  {tagName} ({tagCount})
                 </a>
               </Link>
             </li>
