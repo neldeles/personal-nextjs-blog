@@ -1,6 +1,6 @@
 ---
 date: "2021-07-01T12:23:38"
-tags: react, useRef, react/context
+tags: react, useRef, react/context, dog, cat, mouse, wolf, meow, woof, frog
 title: useRef mutable values usecase
 published: true
 description: Using useRef to store infrastructure data of a component.
