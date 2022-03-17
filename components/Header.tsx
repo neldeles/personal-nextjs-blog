@@ -26,13 +26,13 @@ export function Header() {
             </div>
           </div>
         </div>
-        {/* <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden bg-white">
+        <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden bg-white">
           {navigation.map((link) => (
             <StyledLink key={link.name} href={link.href}>
               {link.name}
             </StyledLink>
           ))}
-        </div> */}
+        </div>
       </nav>
     </header>
   );

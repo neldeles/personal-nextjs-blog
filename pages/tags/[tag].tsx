@@ -22,9 +22,18 @@ type Post = {
   readTime: string;
 };
 
-export default function PostsByTagPage({ posts }: { posts: Post[] }) {
+export default function PostsByTagPage({
+  posts,
+  tag,
+}: {
+  posts: Post[];
+  tag: string;
+}) {
   return (
-    <div className="max-w-prose mx-auto py-16">
+    <div className="max-w-prose mx-auto py-16 px-8 md:px-0">
+      <h1 className="mb-1.5 block text-lg text-gray-500 leading-8 tracking-tight">
+        Posts tagged with &quot;{tag}&quot;
+      </h1>
       {posts.map(({ slug, frontmatter }) => (
         <div key={slug}>
           <Link href={`/post/${slug}`}>
@@ -60,6 +69,7 @@ export async function getStaticProps({ params }: Params) {
   return {
     props: {
       posts,
+      tag: params.tag,
     },
   };
 }
