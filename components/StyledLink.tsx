@@ -11,7 +11,6 @@ export function StyledLink({
   href: string;
 }) {
   const router = useRouter();
-  console.log(router.pathname);
 
   return (
     <Link href={href}>

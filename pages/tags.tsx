@@ -12,8 +12,6 @@ export async function getStaticProps() {
 }
 
 export default function TagsList({ tags }: { tags: any }) {
-  console.log("tags", tags);
-
   return (
     <div className="mx-auto max-w-prose">
       <ul className="flex flex-wrap justify-around">
